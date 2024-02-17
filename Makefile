@@ -3,11 +3,11 @@ all: build
 deploy: buildprod builddocker pushdocker
 
 buildprod:
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./cmd/web/web ./cmd/web
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./cmd/api/api ./cmd/api
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./cmd/crawler/crawler ./cmd/crawler
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./cmd/testcpu/testcpu ./cmd/testcpu
-	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./cmd/testram/testram ./cmd/testram
+	CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o ./cmd/web/web ./cmd/web
+	CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o ./cmd/api/api ./cmd/api
+	CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o ./cmd/crawler/crawler ./cmd/crawler
+	CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o ./cmd/testcpu/testcpu ./cmd/testcpu
+	CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -o ./cmd/testram/testram ./cmd/testram
 
 build:
 	go build -o ./cmd/web/web ./cmd/web
@@ -17,15 +17,15 @@ build:
 	go build -o ./cmd/testram/testram ./cmd/testram
 
 builddocker:
-	docker build -t lanecwagner/synergychat-web ./cmd/web
-	docker build -t lanecwagner/synergychat-api ./cmd/api
-	docker build -t lanecwagner/synergychat-crawler ./cmd/crawler
-	docker build -t lanecwagner/synergychat-testram ./cmd/testram
-	docker build -t lanecwagner/synergychat-testcpu ./cmd/testcpu
+	docker build -t evandolatowski/synergychat-web ./cmd/web
+	docker build -t evandolatowski/synergychat-api ./cmd/api
+	docker build -t evandolatowski/synergychat-crawler ./cmd/crawler
+	docker build -t evandolatowski/synergychat-testram ./cmd/testram
+	docker build -t evandolatowski/synergychat-testcpu ./cmd/testcpu
 
 pushdocker:
-	docker push lanecwagner/synergychat-web
-	docker push lanecwagner/synergychat-api
-	docker push lanecwagner/synergychat-crawler
-	docker push lanecwagner/synergychat-testram
-	docker push lanecwagner/synergychat-testcpu
+	docker push evandolatowski/synergychat-web
+	docker push evandolatowski/synergychat-api
+	docker push evandolatowski/synergychat-crawler
+	docker push evandolatowski/synergychat-testram
+	docker push evandolatowski/synergychat-testcpu
