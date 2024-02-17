@@ -16,7 +16,7 @@ kubectl create deployment synergychat-web --image=evandolatowski/synergychat-web
 ```
 simply using my command in place of the one given will allow you to follow along with your ARM64 processor
 
-
+## About
 
 
 SynergyChat is not only the best workforce chatting tool, but the best analytics engine. SynergyChat is powered by several microservies:
