@@ -10,6 +10,12 @@ kubectl create deployment synergychat-web --image=lanecwagner/synergychat-web:la
 
 So my intention was to build the needed Docker images myself with ARM64 to upload my versions to DockerHub for use in lessons
 
+if youre viewing this and by luck need the same solution you can use my file, run this command and continue the lessons
+```
+kubectl create deployment synergychat-web --image=evandolatowski/synergychat-web:latest
+```
+simply using my command in place of the one given will allow you to follow along with your ARM64 processor
+
 
 
 
