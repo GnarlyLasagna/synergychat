@@ -16,6 +16,15 @@ kubectl create deployment synergychat-web --image=evandolatowski/synergychat-web
 ```
 simply using my command in place of the one given will allow you to follow along with your ARM64 processor
 
+I have also built and deployed a arm64 version for each other Image used from this SynergyChat project Including:
+ - evandolatowski/synergychat-testcpu
+ - evandolatowski/synergychat-testram
+ - evandolatowski/synergychat-crawler
+ - evandolatowski/synergychat-api
+ - evandolatowski/synergychat-web
+
+
+
 ## About
 
 
