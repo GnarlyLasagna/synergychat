@@ -1,5 +1,18 @@
 # SynergyChat
 
+## About This Fork
+
+I have forked this repository while following along to the Kubernetes lessons on Boot.Dev
+I had an issue using the following command because my laptop is an ARM64 processor and not AMD64
+```
+kubectl create deployment synergychat-web --image=lanecwagner/synergychat-web:latest
+```
+
+So my intention was to build the needed Docker images myself with ARM64 to upload my versions to DockerHub for use in lessons
+
+
+
+
 SynergyChat is not only the best workforce chatting tool, but the best analytics engine. SynergyChat is powered by several microservies:
 
 * "web" - The web frontend. This small micro-service serves static HTML, CSS, and JavaScript files that form the shell of the application.
